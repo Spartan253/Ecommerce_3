@@ -5,7 +5,7 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon index.js",
-    "client": "live-server --port=5500 --open=frontendecommerce/index.html"
+    "client": "live-server --port=5500 --open=index.html"
   },
   "keywords": [],
   "author": "",

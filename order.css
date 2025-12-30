@@ -1,0 +1,118 @@
+/* Reset & Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  padding: 40px 5%;
+  min-height: 100vh;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #ffb347;
+  margin-bottom: 30px;
+}
+
+/* Button Styling */
+#show-orders-btn {
+  display: block;
+  margin: 0 auto 30px;
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#show-orders-btn:hover {
+  background-color: #e4574f;
+}
+
+/* Orders List */
+#all-orders {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Order Card */
+.order-card {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #ffb347;
+}
+
+/* Order Details */
+.order-card p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Order ID and status emphasis */
+.order-card p strong {
+  color: #fff;
+}
+
+/* Status update section */
+.order-card .update-section {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.order-card select,
+.order-card button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.order-card select {
+  background-color: #2e2e2e;
+  color: white;
+  border: 1px solid #444;
+}
+
+.order-card button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.order-card button:hover {
+  background-color: #388e3c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .order-card {
+    padding: 15px;
+  }
+
+  #show-orders-btn {
+    width: 100%;
+  }
+
+  .order-card .update-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

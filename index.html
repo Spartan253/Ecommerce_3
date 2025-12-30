@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div>
+            <nav>
+    <a href="signup.html">Sign up</a>
+             <a href="login.html">login</a>
+             <a href="cart.html">Cart</a>
+            </nav>
+        
+        </div>
+
+         <h1>Our Products</h1>
+           <div id="product-list"  class="container"></div>
+    </div>
+
+     <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ecommerce</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+  <div class="maincontainer">
+    
+<nav class="navbar">
+
+ 
+<h2 class="trendheading">TrendMart</h2>
+  <div class="TrendMart">
+    
+    <a href="signup.html">Sign Up</a>
+    <a href="login.html">Login</a>
+</div>
+    
+  </nav>
+    
+  <!-- Navigation bar -->
+  
+<div class="about-section">
+  <h1>About us</h1>
+<p>Welcome to TrendMart, your trusted one-stop online shopping destination designed to bring convenience, quality, and value to your everyday purchases. Founded with the vision of transforming the way people shop, TrendMart is committed to providing a seamless digital shopping experience that matches the pace and needs of modern consumers.</p>
+<p>At TrendMart, we offer a wide and ever-growing selection of products across multiple categories including fashion, electronics, home & living, beauty, and more. Whether you're looking for the latest tech gadgets, stylish apparel, or everyday essentials, our carefully curated catalog is tailored to meet your lifestyle and budget.</p> 
+<p>Our mission is simple — to make online shopping fast, easy, and enjoyable. We strive to deliver only the best in quality and service, with secure payment options, timely delivery, and a user-friendly platform that works across all devices. Every product featured on our website goes through a quality check, ensuring you get nothing but the best.</p>
+<p>Customer satisfaction is at the heart of what we do. From browsing to checkout to doorstep delivery, we are here to support you at every step. Our dedicated customer support team is always ready to assist with queries, returns, or any post-purchase help you might need.</p>
+</div>
+  
+<!-- Products will be dynamically loaded here -->
+  <div id="product-list" class="container"></div>
+
+  <!--  Add basic login check -->
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    const cartLink = document.getElementById("cart-link");
+     
+    // Optional: prevent access to cart if not logged in
+    if (!user || !user.token || user.accountType !== "User") {
+      cartLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("Please login as a user to view the cart.");
+        window.location.href = "login.html";
+      });
+    }
+  </script>
+  </div>
+
+
+  <script src="script.js"></script>
+  <script src="order.js"></script>
+</body>
+</html>

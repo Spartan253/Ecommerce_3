@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product</title>
+  <link rel="stylesheet" href="product.css"/>
+</head>
+<body>
+
+  <!-- ADMIN-ONLY CONTROLS -->
+  <div id="admin-controls" >
+    <h2>Create Product</h2>
+    <form id="product-form">
+      <input id="name" placeholder="Name" required />
+      <input id="description" placeholder="Description" required />
+      <input id="price" placeholder="Price" type="number" required />
+      <input id="imageUrl" placeholder="Full Image URL (e.g. https://...)" required />
+      <input id="stock" placeholder="Stock" type="number" required />
+      <button type="submit">Create Product</button>
+    </form>
+
+    <hr />
+
+    <h2>Update Product</h2>
+    <form id="update-form">
+      <input id="update-productId" placeholder="Product ID" required />
+      <input id="update-name" placeholder="Name" />
+      <input id="update-price" placeholder="Price" type="number" />
+      <input id="update-stock" placeholder="Stock" type="number" />
+      <input id="update-description" placeholder="Description" />
+      <input id="update-imageUrl" placeholder="Full Image URL (e.g. https://...)" />
+      <button type="submit">Update Product</button>
+    </form>
+
+    <hr />
+
+    <h2>Delete Product</h2>
+    <form id="delete-form">
+      <input id="delete-productId" placeholder="Product ID" required />
+      <button type="submit">Delete Product</button>
+    </form>
+
+    <hr />
+  </div>
+
+  <!-- SHOWN TO BOTH USER AND ADMIN -->
+  <div id="show-products-section" >
+    <h2>All Products</h2>
+    <button type="button" id="show-products-btn">Load Products</button>
+    <button onclick="window.location.href='cart.html'">Go to Cart</button>
+    <div id="all-products"></div>
+
+   
+  </div>
+
+  <script type="module" src="product.js"></script>
+</body>
+</html>
