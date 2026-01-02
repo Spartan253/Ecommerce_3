@@ -1,4 +1,4 @@
-export const BASE_URL="http://localhost:4000/api/v1";
+export const BASE_URL="https://ecommerce-3-mq4p.onrender.com/";
 
 export  const authEndpoints={
      SIGNUP_API: `${BASE_URL}/auth/signup`,
